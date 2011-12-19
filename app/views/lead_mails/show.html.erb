@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Email:</b>
+  <%= @lead_mail.email %>
+</p>
+
+<p>
+  <b>Lead:</b>
+  <%= @lead_mail.lead_id %>
+</p>
+
+<p>
+  <b>Mail template:</b>
+  <%= @lead_mail.mail_template_id %>
+</p>
+
+<p>
+  <b>From user:</b>
+  <%= @lead_mail.from_user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_lead_mail_path(@lead_mail) %> |
+<%= link_to 'Back', lead_mails_path %>

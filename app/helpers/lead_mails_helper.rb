@@ -1,0 +1,2 @@
+module LeadMailsHelper
+end

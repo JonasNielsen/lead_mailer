@@ -1,0 +1,33 @@
+<%= form_for(@lead_mail) do |f| %>
+  <% if @lead_mail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lead_mail.errors.count, "error") %> prohibited this lead_mail from being saved:</h2>
+
+      <ul>
+      <% @lead_mail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :lead_id %><br />
+    <%= f.number_field :lead_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mail_template_id %><br />
+    <%= f.number_field :mail_template_id %>
+  </div>
+  <div class="field">
+    <%= f.label :from_user_id %><br />
+    <%= f.number_field :from_user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

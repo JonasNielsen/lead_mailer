@@ -1,0 +1,29 @@
+<h1>Listing lead_mails</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Lead</th>
+    <th>Mail template</th>
+    <th>From user</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lead_mails.each do |lead_mail| %>
+  <tr>
+    <td><%= lead_mail.email %></td>
+    <td><%= lead_mail.lead_id %></td>
+    <td><%= lead_mail.mail_template_id %></td>
+    <td><%= lead_mail.from_user_id %></td>
+    <td><%= link_to 'Show', lead_mail %></td>
+    <td><%= link_to 'Edit', edit_lead_mail_path(lead_mail) %></td>
+    <td><%= link_to 'Destroy', lead_mail, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lead mail', new_lead_mail_path %>
